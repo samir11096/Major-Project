@@ -41,7 +41,7 @@ export const PostNewMessage = () => {
     return (
         <div className='card mt-3'>
             <div className='card-header'>
-                Ask question to Luv 2 Read Admin
+                Ask question to Lib-Help Admin
             </div>
             <div className='card-body'>
                 <form method='POST'>
