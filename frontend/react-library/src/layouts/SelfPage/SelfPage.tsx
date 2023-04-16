@@ -1,6 +1,6 @@
 import { useState } from "react";
-// import { HistoryPage } from "./components/HistoryPage";
-// import { Loans } from "./components/Loans";
+import { Loans } from "./components/Loans";
+import { HistoryPage } from "./components/HistoryPage";
 
 export const ShelfPage = () => {
 
@@ -23,7 +23,7 @@ export const ShelfPage = () => {
                         </button>
                     </div>
                 </nav>
-                {/* <div className='tab-content' id='nav-tabContent'>
+                <div className='tab-content' id='nav-tabContent'>
                     <div className='tab-pane fade show active' id='nav-loans' role='tabpanel'
                         aria-labelledby='nav-loans-tab'>
                             <Loans/>
@@ -32,7 +32,7 @@ export const ShelfPage = () => {
                         aria-labelledby='nav-history-tab'>
                             {historyClick ? <HistoryPage/> : <></>}
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );
