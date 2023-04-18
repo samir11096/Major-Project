@@ -1,0 +1,37 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: reactlibrarydatabase
+
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+  springboot:
+    build: ./backend/spring-boot-library
+    ports:
+      - "8090:8090"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://localhost:3307/reactlibrarydatabase?useSSL=false&useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: password
+      OKTA_ISSUER_URI: https://dev-10835870.okta.com/oauth2/default
+      OKTA_CLIENT_ID: 0oa91wp8dopyNe9Fv5d7
+      OKTA_REDIRECT_URI: http://localhost:3000/login/callback
+
+  reactjs:
+    build: ./frontend/react-library
+    ports:
+      - "3000:3000"
+    depends_on:
+      - springboot
+    environment:
+      OKTA_CLIENT_ID: 0oa91wp8dopyNe9Fv5d7
+      OKTA_ISSUER: https://dev-10835870.okta.com/oauth2/default
+      OKTA_REDIRECT_URI: http://localhost:3000/login/callback
