@@ -1,13 +1,12 @@
 version: '3'
 services:
   db:
-    image: mysql:latest
+    build: ./database
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: reactlibrarydatabase
-
     volumes:
-      - ./mysql/data:/var/lib/mysql
+      - app-volume:/var/lib/mysql
     ports:
       - "3307:3306"
     networks:
@@ -44,3 +43,6 @@ services:
 
 networks:
   backend-net:
+
+volumes:
+  app-volume:

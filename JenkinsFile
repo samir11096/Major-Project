@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+    environment {
+        DOCKERHUB_CREDENTIALS_USR = ''
+        DOCKERHUB_CREDENTIALS_PSSW = ''
+      }
+    stages{
+        stage("Git Pull"){
+            steps{
+                git url: 'https://github.com/samir11096/Major-Project.git',
+                    branch: 'main'
+            }
+        }
+        stage('Maven Build and Test'){
+            steps{
+                sh 'cd /backend/spring-boot-library/'
+                sh 'mvn clean install'
+                sh 'cd ../../'
+            }
+        }
+
+        stage("Build Docker Image"){
+            steps{
+                sh 'docker build -t samiraghouri/calculator:version1 .'
+            }
+        }
+
+        stage("Push Image to DockerHub"){
+             steps {
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
+                       sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
+                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/calculator:version1"
+
+                     }
+                     sh 'docker rmi samiraghouri/calculator:version1'
+
+                  }
+
+        }
+        stage("Ansibile Deployment"){
+            steps{
+                   sh 'ansible-playbook -i dev.inv playbook.yml'
+            }
+        }
+
+    }
+
+}
