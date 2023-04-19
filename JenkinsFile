@@ -15,6 +15,7 @@ pipeline {
             steps{
                 sh 'ls'
                 sh 'cd backend/spring-boot-library/'
+                sh 'ls'
                 sh 'mvn clean install'
                 sh 'cd ../../'
             }
