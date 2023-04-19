@@ -13,35 +13,49 @@ pipeline {
         }
         stage('Maven Build and Test'){
             steps{
-                sh 'cd /backend/spring-boot-library/'
+                sh 'cd backend/spring-boot-library/'
                 sh 'mvn clean install'
                 sh 'cd ../../'
             }
         }
 
-        stage("Build Docker Image"){
+        stage("Build Backend Image"){
             steps{
-                sh 'docker build -t samiraghouri/calculator:version1 .'
+                sh 'cd backend/spring-boot-library/'
+                sh 'docker build -t samiraghouri/backend:version1 .'
             }
         }
-
-        stage("Push Image to DockerHub"){
+        stage("Build Frontend Image"){
+            steps{
+                sh 'cd frontend/react-library/'
+                sh 'docker build -t samiraghouri/frontend:version1 .'
+            }
+        }
+        stage("Build Database Image"){
+            steps{
+                sh 'cd database/'
+                sh 'docker build -t samiraghouri/database:version1 .'
+            }
+        }
+        stage("Push Images to DockerHub"){
              steps {
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
                        sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
-                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/calculator:version1"
-
+                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/backend:version1"
+                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/frontend:version1"
+                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/database:version1"
                      }
-                     sh 'docker rmi samiraghouri/calculator:version1'
-
+                     sh 'docker rmi samiraghouri/backend:version1'
+                     sh 'docker rmi samiraghouri/frontend:version1'
+                     sh 'docker rmi samiraghouri/database:version1'
                   }
 
         }
-        stage("Ansibile Deployment"){
-            steps{
-                   sh 'ansible-playbook -i dev.inv playbook.yml'
-            }
-        }
+//         stage("Ansibile Deployment"){
+//             steps{
+//                    sh 'ansible-playbook -i dev.inv playbook.yml'
+//             }
+//         }
 
     }
 
