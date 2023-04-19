@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    build: ./database
+    image: samiraghouri/database:version1
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: reactlibrarydatabase
@@ -13,7 +13,7 @@ services:
       - backend-net
 
   springboot:
-    build: ./backend/spring-boot-library
+    image: samiraghouri/backend:version1
     ports:
       - "8090:8090"
     depends_on:
@@ -30,7 +30,7 @@ services:
       - backend-net
 
   reactjs:
-    build: ./frontend/react-library
+    image: samiraghouri/frontend:version1
     ports:
       - "3000:3000"
     depends_on:
