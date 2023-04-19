@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Maven Build and Test'){
             steps{
+                sh 'ls'
                 sh 'cd backend/spring-boot-library/'
                 sh 'mvn clean install'
                 sh 'cd ../../'
@@ -23,12 +24,14 @@ pipeline {
             steps{
                 sh 'cd backend/spring-boot-library/'
                 sh 'docker build -t samiraghouri/backend:version1 .'
+                sh 'cd ../../'
             }
         }
         stage("Build Frontend Image"){
             steps{
                 sh 'cd frontend/react-library/'
                 sh 'docker build -t samiraghouri/frontend:version1 .'
+                sh 'cd ../../'
             }
         }
         stage("Build Database Image"){
