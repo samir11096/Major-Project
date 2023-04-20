@@ -17,31 +17,32 @@
         name: docker-compose
         state: present
 
-    # Create directory for Docker Compose files
-    - name: Create Docker Compose directory
-      become : true
-      file:
-        path: /{{ project_name }}/docker-compose
-        state: directory
-        mode: "0755"
+#    # Create directory for Docker Compose files
+#    - name: Create Docker Compose directory
+#      become : true
+#      file:
+#        path: /{{ project_name }}/docker-compose
+#        state: directory
+#        mode: "0755"
+
 
     # Copy Docker Compose file
     - name: Copy Docker Compose file
       copy:
         src: docker-compose.yml
-        dest: /{{ project_name }}/docker-compose/docker-compose.yml
+        dest: ./
 
     # Pull Docker images
     - name: Pull Docker images
       docker_compose:
-        project_src: /{{ project_name }}/docker-compose
+        project_src: ./
         version: "{{ docker_compose_version }}"
         pull: yes
 
     # Start Docker Compose containers
     - name: Start Docker Compose containers
       docker_compose:
-        project_src: /{{ project_name }}/docker-compose
+        project_src: ./
         version: "{{ docker_compose_version }}"
         up: yes
 
