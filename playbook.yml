@@ -36,6 +36,7 @@
 
     # Pull Docker images and Start Containers
     - name: Pull Docker images
+      become: true
       docker_compose:
         project_src: ./
         state: present
