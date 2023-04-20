@@ -32,15 +32,10 @@
         src: docker-compose.yml
         dest: ./
 
-    # Pull Docker images
+    # Pull Docker images and Start Containers
     - name: Pull Docker images
       docker_compose:
         project_src: ./
+        state: started
         pull: yes
-
-    # Start Docker Compose containers
-    - name: Start Docker Compose containers
-      docker_compose:
-        project_src: ./
-        up: yes
 
