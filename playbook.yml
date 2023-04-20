@@ -22,6 +22,7 @@
       file:
         path: /{{ project_name }}/docker-compose
         state: directory
+        mode: "0755"
 
     # Copy Docker Compose file
     - name: Copy Docker Compose file
