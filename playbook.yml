@@ -36,13 +36,11 @@
     - name: Pull Docker images
       docker_compose:
         project_src: ./
-        version: "{{ docker_compose_version }}"
         pull: yes
 
     # Start Docker Compose containers
     - name: Start Docker Compose containers
       docker_compose:
         project_src: ./
-        version: "{{ docker_compose_version }}"
         up: yes
 
