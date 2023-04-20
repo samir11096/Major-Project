@@ -19,6 +19,7 @@
 
     # Create directory for Docker Compose files
     - name: Create Docker Compose directory
+      become : true
       file:
         path: /{{ project_name }}/docker-compose
         state: directory
