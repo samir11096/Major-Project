@@ -20,26 +20,26 @@
     # Create directory for Docker Compose files
     - name: Create Docker Compose directory
       file:
-        path: /opt/{{ project_name }}/docker-compose
+        path: /{{ project_name }}/docker-compose
         state: directory
 
     # Copy Docker Compose file
     - name: Copy Docker Compose file
       copy:
         src: docker-compose.yml
-        dest: /opt/{{ project_name }}/docker-compose/docker-compose.yml
+        dest: /{{ project_name }}/docker-compose/docker-compose.yml
 
     # Pull Docker images
     - name: Pull Docker images
       docker_compose:
-        project_src: /opt/{{ project_name }}/docker-compose
+        project_src: /{{ project_name }}/docker-compose
         version: "{{ docker_compose_version }}"
         pull: yes
 
     # Start Docker Compose containers
     - name: Start Docker Compose containers
       docker_compose:
-        project_src: /opt/{{ project_name }}/docker-compose
+        project_src: /{{ project_name }}/docker-compose
         version: "{{ docker_compose_version }}"
         up: yes
 
