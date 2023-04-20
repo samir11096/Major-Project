@@ -60,7 +60,7 @@ pipeline {
         }
         stage("Ansibile Deployment"){
             steps{
-                   sh 'ansible-playbook -i dev.inv playbook.yml'
+                   sh 'ansible-playbook -i dev.inv playbook.yml --ask-become-pass'
             }
         }
 
