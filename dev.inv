@@ -1,2 +1,2 @@
-[webserver]
-192.168.50.32 ansible_user=umair ansible_ssh_pass=umairbeig ansible_sudo_pass=umairbeig
+    [webserver]
+    192.168.59.32 ansible_user=umair ansible_ssh_pass=umairbeig ansible_sudo_pass=umairbeig
