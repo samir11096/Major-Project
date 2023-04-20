@@ -7,14 +7,12 @@
   tasks:
     # Install Docker
     - name: Install Docker
-      become: true
       apt:
         name: docker.io
         state: present
 
     # Install Docker Compose
     - name: Install Docker Compose
-      become: true
       apt:
         name: docker-compose
         state: present
