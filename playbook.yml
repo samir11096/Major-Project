@@ -1,0 +1,51 @@
+---
+- hosts: webserver
+  vars:
+    - docker_compose_version: "1.29.2"
+    - project_name : "Lib-Help"
+
+  tasks:
+    # Install Docker
+    - name: Install Docker
+      become: true
+      apt:
+        name: docker.io
+        state: present
+
+    # Install Docker Compose
+    - name: Install Docker Compose
+      become: true
+      apt:
+        name: docker-compose
+        state: present
+        register: result
+        until: result is succeeded
+        retries: 3
+        delay: 10
+
+    # Create directory for Docker Compose files
+    - name: Create Docker Compose directory
+      file:
+        path: /opt/{{ project_name }}/docker-compose
+        state: directory
+
+    # Copy Docker Compose file
+    - name: Copy Docker Compose file
+      copy:
+        src: docker-compose.yml
+        dest: /opt/{{ project_name }}/docker-compose/docker-compose.yml
+
+    # Pull Docker images
+    - name: Pull Docker images
+      docker_compose:
+        project_src: /opt/{{ project_name }}/docker-compose
+        version: "{{ docker_compose_version }}"
+        pull: yes
+
+    # Start Docker Compose containers
+    - name: Start Docker Compose containers
+      docker_compose:
+        project_src: /opt/{{ project_name }}/docker-compose
+        version: "{{ docker_compose_version }}"
+        up: yes
+

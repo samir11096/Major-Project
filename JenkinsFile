@@ -58,11 +58,11 @@ pipeline {
                   }
 
         }
-//         stage("Ansibile Deployment"){
-//             steps{
-//                    sh 'ansible-playbook -i dev.inv playbook.yml'
-//             }
-//         }
+        stage("Ansibile Deployment"){
+            steps{
+                   sh 'ansible-playbook -i dev.inv playbook.yml'
+            }
+        }
 
     }
 
