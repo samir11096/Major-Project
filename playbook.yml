@@ -36,6 +36,6 @@
     - name: Pull Docker images
       docker_compose:
         project_src: ./
-        state: started
+        state: present
         pull: yes
 
