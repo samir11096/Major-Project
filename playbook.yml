@@ -16,10 +16,6 @@
       apt:
         name: docker-compose
         state: present
-        register: result
-        until: result is succeeded
-        retries: 3
-        delay: 10
 
     # Create directory for Docker Compose files
     - name: Create Docker Compose directory
