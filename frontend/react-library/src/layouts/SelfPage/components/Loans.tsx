@@ -26,6 +26,7 @@ export const Loans = () => {
                         'Content-Type': 'application/json'
                     }
                 };
+                console.log(authState.accessToken?.accessToken)
                 const shelfCurrentLoansResponse = await fetch(url, requestOptions);
                 if (!shelfCurrentLoansResponse.ok) {
                     throw new Error('Something went wrong!');

@@ -1,0 +1,9 @@
+2023-05-11 20:16:13 INFO  [c.e.s.controller.BookController] API: /api/books/secure/currentloans/count, Response state: OK, Request time: 16ms
+2023-05-11 20:16:13 INFO  [c.e.s.controller.BookController] API: /api/books/secure/ischeckedout/byuser, Response state: OK, Request time: 15ms
+2023-05-11 20:16:13 INFO  [c.e.s.controller.BookController] API: /api/reviews/secure/user/book, Response state: OK, Request time: 29ms
+2023-05-11 20:16:17 INFO  [c.e.s.controller.BookController] API: /api/books/secure/currentloans/count, Response state: OK, Request time: 6ms
+2023-05-11 20:16:17 INFO  [c.e.s.controller.BookController] API: /api/reviews/secure/user/book, Response state: OK, Request time: 6ms
+2023-05-11 20:16:17 INFO  [c.e.s.controller.BookController] API: /api/books/secure/ischeckedout/byuser, Response state: OK, Request time: 6ms
+2023-05-11 20:16:21 INFO  [c.e.s.controller.BookController] API: /api/reviews/secure/user/book, Response state: OK, Request time: 5ms
+2023-05-11 20:16:21 INFO  [c.e.s.controller.BookController] API: /api/books/secure/currentloans/count, Response state: OK, Request time: 5ms
+2023-05-11 20:16:21 INFO  [c.e.s.controller.BookController] API: /api/books/secure/ischeckedout/byuser, Response state: OK, Request time: 5ms
