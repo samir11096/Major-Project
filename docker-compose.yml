@@ -26,6 +26,9 @@ services:
       OKTA_CLIENT_ID: 0oa91wp8dopyNe9Fv5d7
       OKTA_REDIRECT_URI: http://localhost:3000/login/callback
 
+    volumes:
+      - logs-volume:/app/logs
+
     networks:
       - backend-net
 
@@ -46,3 +49,5 @@ networks:
 
 volumes:
   app-volume:
+  logs-volume:
+
