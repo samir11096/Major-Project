@@ -2,7 +2,7 @@
 <configuration>
 
 <!--    works as varible-->
-    <property name="HOME_LOG" value="logs/app.log"/>
+    <property name="HOME_LOG" value="./logs/app.log"/>
 
 <!--    defining appender for console-->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
@@ -37,6 +37,8 @@
     <logger name="org.springframework.boot" level="ERROR" />
     <logger name="org.springframework.context" level="ERROR" />
     <logger name="com.example.springbootlibrary.SpringBootLibraryApplication" level="WARN" />
+    <logger name="com.example.springbootlibrary.controller" level="WARN"/>
+
 
 
     <root level="INFO">
