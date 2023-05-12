@@ -27,7 +27,7 @@ services:
       OKTA_REDIRECT_URI: http://localhost:3000/login/callback
 
     volumes:
-      - logs-volume:/app/logs
+      - logs-volume:/logs
 
     networks:
       - backend-net
