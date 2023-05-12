@@ -1,0 +1,99 @@
+2023-05-12 09:18:40 INFO  [o.s.t.c.s.AbstractContextLoader] Could not detect default resource locations for test class [com.example.springbootlibrary.SpringBootLibraryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-12 09:18:40 INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [com.example.springbootlibrary.SpringBootLibraryApplicationTests]: SpringBootLibraryApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-12 09:18:41 INFO  [c.e.s.SpringBootLibraryApplicationTests] Starting SpringBootLibraryApplicationTests using Java 11.0.19 on swift-sf314-52 with PID 35578 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:18:41 INFO  [c.e.s.SpringBootLibraryApplicationTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:18:50 INFO  [c.e.s.SpringBootLibraryApplicationTests] Started SpringBootLibraryApplicationTests in 8.935 seconds (JVM running for 10.905)
+2023-05-12 09:18:50 INFO  [c.e.s.AdminControllerTests] Starting AdminControllerTests using Java 11.0.19 on swift-sf314-52 with PID 35578 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:18:50 INFO  [c.e.s.AdminControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:18:52 INFO  [c.e.s.AdminControllerTests] Started AdminControllerTests in 1.892 seconds (JVM running for 13.004)
+2023-05-12 09:18:52 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/add/book, Response state: OK, Request time: 11ms
+2023-05-12 09:18:53 INFO  [c.e.s.MessageControllerTests] Starting MessageControllerTests using Java 11.0.19 on swift-sf314-52 with PID 35578 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:18:53 INFO  [c.e.s.MessageControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:18:55 INFO  [c.e.s.MessageControllerTests] Started MessageControllerTests in 1.642 seconds (JVM running for 15.617)
+2023-05-12 09:18:55 INFO  [c.e.s.BookControllerTests] Starting BookControllerTests using Java 11.0.19 on swift-sf314-52 with PID 35578 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:18:55 INFO  [c.e.s.BookControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:18:57 INFO  [c.e.s.BookControllerTests] Started BookControllerTests in 1.451 seconds (JVM running for 17.75)
+2023-05-12 09:18:57 INFO  [c.e.s.ReviewControllerTests] Starting ReviewControllerTests using Java 11.0.19 on swift-sf314-52 with PID 35578 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:18:57 INFO  [c.e.s.ReviewControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:18:59 INFO  [c.e.s.ReviewControllerTests] Started ReviewControllerTests in 1.463 seconds (JVM running for 19.909)
+2023-05-12 09:23:12 INFO  [o.s.t.c.s.AbstractContextLoader] Could not detect default resource locations for test class [com.example.springbootlibrary.SpringBootLibraryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-12 09:23:12 INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [com.example.springbootlibrary.SpringBootLibraryApplicationTests]: SpringBootLibraryApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-12 09:23:13 INFO  [c.e.s.SpringBootLibraryApplicationTests] Starting SpringBootLibraryApplicationTests using Java 11.0.19 on swift-sf314-52 with PID 36159 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:23:13 INFO  [c.e.s.SpringBootLibraryApplicationTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:23:22 INFO  [c.e.s.SpringBootLibraryApplicationTests] Started SpringBootLibraryApplicationTests in 9.856 seconds (JVM running for 12.199)
+2023-05-12 09:23:22 INFO  [c.e.s.AdminControllerTests] Starting AdminControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36159 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:23:22 INFO  [c.e.s.AdminControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:23:24 INFO  [c.e.s.AdminControllerTests] Started AdminControllerTests in 2.046 seconds (JVM running for 14.446)
+2023-05-12 09:23:25 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/add/book, Response state: OK, Request time: 12ms
+2023-05-12 09:23:25 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/increase/book/quantity, Response state: OK, Request time: 1ms
+2023-05-12 09:23:25 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/delete/book, Response state: OK, Request time: 1ms
+2023-05-12 09:23:25 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/decrease/book/quantity, Response state: OK, Request time: 1ms
+2023-05-12 09:23:25 INFO  [c.e.s.MessageControllerTests] Starting MessageControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36159 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:23:25 INFO  [c.e.s.MessageControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:23:27 INFO  [c.e.s.MessageControllerTests] Started MessageControllerTests in 1.519 seconds (JVM running for 16.841)
+2023-05-12 09:23:27 INFO  [c.e.s.controller.BookController] API: /api/message/secure/admin/message, Response state: OK, Request time: 0ms
+2023-05-12 09:23:27 INFO  [c.e.s.controller.BookController] API: /api/message/secure/add/message, Response state: OK, Request time: 1ms
+2023-05-12 09:23:28 INFO  [c.e.s.BookControllerTests] Starting BookControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36159 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:23:28 INFO  [c.e.s.BookControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:23:29 INFO  [c.e.s.BookControllerTests] Started BookControllerTests in 1.49 seconds (JVM running for 18.996)
+2023-05-12 09:23:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/renew/loan, Response state: OK, Request time: 1ms
+2023-05-12 09:23:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/checkout, Response state: OK, Request time: 1ms
+2023-05-12 09:23:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/currentloans/count, Response state: OK, Request time: 1ms
+2023-05-12 09:23:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/ischeckedout/byuser, Response state: OK, Request time: 0ms
+2023-05-12 09:23:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/return, Response state: OK, Request time: 0ms
+2023-05-12 09:23:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/currentloans, Response state: OK, Request time: 1ms
+2023-05-12 09:23:29 INFO  [c.e.s.ReviewControllerTests] Starting ReviewControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36159 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:23:29 INFO  [c.e.s.ReviewControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:23:31 INFO  [c.e.s.ReviewControllerTests] Started ReviewControllerTests in 1.437 seconds (JVM running for 20.84)
+2023-05-12 09:23:31 INFO  [c.e.s.controller.BookController] API: /api/reviews/secure/user/book, Response state: OK, Request time: 1ms
+2023-05-12 09:24:49 INFO  [o.s.t.c.s.AbstractContextLoader] Could not detect default resource locations for test class [com.example.springbootlibrary.AdminControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-12 09:24:49 INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [com.example.springbootlibrary.AdminControllerTests]: AdminControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-12 09:24:50 INFO  [c.e.s.AdminControllerTests] Starting AdminControllerTests using Java 11.0.18 on swift-sf314-52 with PID 36399 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:24:50 INFO  [c.e.s.AdminControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:24:58 INFO  [c.e.s.AdminControllerTests] Started AdminControllerTests in 8.622 seconds (JVM running for 10.144)
+2023-05-12 09:24:58 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/add/book, Response state: OK, Request time: 10ms
+2023-05-12 09:24:59 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/increase/book/quantity, Response state: OK, Request time: 1ms
+2023-05-12 09:24:59 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/delete/book, Response state: OK, Request time: 0ms
+2023-05-12 09:24:59 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/decrease/book/quantity, Response state: OK, Request time: 1ms
+2023-05-12 09:27:52 INFO  [o.s.t.c.s.AbstractContextLoader] Could not detect default resource locations for test class [com.example.springbootlibrary.AdminControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-12 09:27:52 INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [com.example.springbootlibrary.AdminControllerTests]: AdminControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-12 09:27:53 INFO  [c.e.s.AdminControllerTests] Starting AdminControllerTests using Java 11.0.18 on swift-sf314-52 with PID 36560 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:27:53 INFO  [c.e.s.AdminControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:28:00 INFO  [c.e.s.AdminControllerTests] Started AdminControllerTests in 7.135 seconds (JVM running for 8.539)
+2023-05-12 09:28:01 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/decrease/book/quantity, Response state: OK, Request time: 9ms
+2023-05-12 09:30:49 INFO  [o.s.t.c.s.AbstractContextLoader] Could not detect default resource locations for test class [com.example.springbootlibrary.AdminControllerTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-12 09:30:49 INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [com.example.springbootlibrary.AdminControllerTests]: AdminControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-12 09:30:50 INFO  [c.e.s.AdminControllerTests] Starting AdminControllerTests using Java 11.0.18 on swift-sf314-52 with PID 36757 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:30:50 INFO  [c.e.s.AdminControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:30:57 INFO  [c.e.s.AdminControllerTests] Started AdminControllerTests in 7.215 seconds (JVM running for 8.519)
+2023-05-12 09:30:58 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/decrease/book/quantity, Response state: OK, Request time: 10ms
+2023-05-12 09:31:15 INFO  [o.s.t.c.s.AbstractContextLoader] Could not detect default resource locations for test class [com.example.springbootlibrary.SpringBootLibraryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-12 09:31:15 INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] Could not detect default configuration classes for test class [com.example.springbootlibrary.SpringBootLibraryApplicationTests]: SpringBootLibraryApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-12 09:31:15 INFO  [c.e.s.SpringBootLibraryApplicationTests] Starting SpringBootLibraryApplicationTests using Java 11.0.19 on swift-sf314-52 with PID 36864 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:31:15 INFO  [c.e.s.SpringBootLibraryApplicationTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:31:22 INFO  [c.e.s.SpringBootLibraryApplicationTests] Started SpringBootLibraryApplicationTests in 7.031 seconds (JVM running for 8.098)
+2023-05-12 09:31:22 INFO  [c.e.s.AdminControllerTests] Starting AdminControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36864 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:31:22 INFO  [c.e.s.AdminControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:31:24 INFO  [c.e.s.AdminControllerTests] Started AdminControllerTests in 1.654 seconds (JVM running for 9.91)
+2023-05-12 09:31:24 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/add/book, Response state: OK, Request time: 12ms
+2023-05-12 09:31:25 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/increase/book/quantity, Response state: OK, Request time: 0ms
+2023-05-12 09:31:25 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/delete/book, Response state: OK, Request time: 0ms
+2023-05-12 09:31:25 INFO  [c.e.s.controller.BookController] API: /api/admin/secure/decrease/book/quantity, Response state: OK, Request time: 0ms
+2023-05-12 09:31:25 INFO  [c.e.s.MessageControllerTests] Starting MessageControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36864 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:31:25 INFO  [c.e.s.MessageControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:31:26 INFO  [c.e.s.MessageControllerTests] Started MessageControllerTests in 1.423 seconds (JVM running for 12.256)
+2023-05-12 09:31:27 INFO  [c.e.s.controller.BookController] API: /api/message/secure/admin/message, Response state: OK, Request time: 1ms
+2023-05-12 09:31:27 INFO  [c.e.s.controller.BookController] API: /api/message/secure/add/message, Response state: OK, Request time: 0ms
+2023-05-12 09:31:27 INFO  [c.e.s.BookControllerTests] Starting BookControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36864 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:31:27 INFO  [c.e.s.BookControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:31:28 INFO  [c.e.s.BookControllerTests] Started BookControllerTests in 1.364 seconds (JVM running for 14.314)
+2023-05-12 09:31:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/renew/loan, Response state: OK, Request time: 1ms
+2023-05-12 09:31:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/checkout, Response state: OK, Request time: 1ms
+2023-05-12 09:31:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/currentloans/count, Response state: OK, Request time: 0ms
+2023-05-12 09:31:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/ischeckedout/byuser, Response state: OK, Request time: 0ms
+2023-05-12 09:31:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/return, Response state: OK, Request time: 1ms
+2023-05-12 09:31:29 INFO  [c.e.s.controller.BookController] API: /api/books/secure/currentloans, Response state: OK, Request time: 1ms
+2023-05-12 09:31:29 INFO  [c.e.s.ReviewControllerTests] Starting ReviewControllerTests using Java 11.0.19 on swift-sf314-52 with PID 36864 (started by samir in /home/samir/Desktop/Sem2/SPE/Major Project/backend/spring-boot-library)
+2023-05-12 09:31:29 INFO  [c.e.s.ReviewControllerTests] No active profile set, falling back to 1 default profile: "default"
+2023-05-12 09:31:30 INFO  [c.e.s.ReviewControllerTests] Started ReviewControllerTests in 1.331 seconds (JVM running for 16.381)
+2023-05-12 09:31:31 INFO  [c.e.s.controller.BookController] API: /api/reviews/secure/user/book, Response state: OK, Request time: 0ms

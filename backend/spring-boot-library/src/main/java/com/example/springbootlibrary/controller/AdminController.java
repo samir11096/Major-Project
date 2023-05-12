@@ -56,7 +56,7 @@ public class AdminController {
         if (admin == null || !admin.equals("admin")) {
             throw new Exception("Administration page only");
         }
-        adminService.increaseBookQuantity(bookId);
+        adminService.decreaseBookQuantity(bookId);
         long endTime = System.currentTimeMillis(); // record end time
         long requestTime = endTime - startTime; // calculate request time
         logger.info("API: /api/admin/secure/decrease/book/quantity, Response state: OK, Request time: " + requestTime + "ms");
