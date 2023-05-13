@@ -57,9 +57,13 @@ public class BookControllerTests {
                         .header("Authorization", "Bearer "+oktaJwtToken)
                         .contentType(MediaType.APPLICATION_JSON))
                         .andExpect(status().isOk());
-
-        // Assert
+//        mockMvc.perform(get("/api/books/secure/currentloans")
+//                        .contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isUnauthorized());
+//
+//        // Assert
         verify(bookService, times(1)).currentLoans(anyString());
+//        verify(bookService, never()).currentLoans(anyString());
     }
 
     @Test
@@ -79,6 +83,14 @@ public class BookControllerTests {
 
         // Assert
         verify(bookService, times(1)).checkoutBook(anyString(), eq(bookId));
+
+//        mockMvc.perform(put("/api/books/secure/checkout?bookId=" + bookId)
+//                        .header("Authorization", "Bearer " + oktaJwtToken)
+//                        .contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isUnauthorized());
+//
+//        // Assert
+//        verify(bookService, never()).checkoutBook(anyString(), eq(bookId));
     }
 
     @Test

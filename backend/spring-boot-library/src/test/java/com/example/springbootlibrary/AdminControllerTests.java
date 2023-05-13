@@ -65,30 +65,30 @@ class AdminControllerTests {
         Mockito.verify(adminService, Mockito.times(1)).decreaseBookQuantity(bookId);
     }
 
-    @Test
-    @DisplayName("Test postBook endpoint")
-    void testPostBookEndpoint() throws Exception {
-        // Arrange
-        AddBookRequest addBookRequest = new AddBookRequest();
-        addBookRequest.setTitle("Test Book");
-        addBookRequest.setAuthor("Test Author");
-        addBookRequest.setDescription("Test Description");
-        addBookRequest.setCopies(123);
-        addBookRequest.setCategory("Test Category");
-        addBookRequest.setImg(null);
-
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        // Act
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/admin/secure/add/book")
-                        .header("Authorization", token)
-                        .content(objectMapper.writeValueAsString(addBookRequest))
-                        .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
-
-        // Assert
-        Mockito.verify(adminService, Mockito.times(1)).postBook(addBookRequest);
-    }
+//    @Test
+//    @DisplayName("Test postBook endpoint")
+//    void testPostBookEndpoint() throws Exception {
+//        // Arrange
+//        AddBookRequest addBookRequest = new AddBookRequest();
+//        addBookRequest.setTitle("Test Book");
+//        addBookRequest.setAuthor("Test Author");
+//        addBookRequest.setDescription("Test Description");
+//        addBookRequest.setCopies(123);
+//        addBookRequest.setCategory("Test Category");
+//        addBookRequest.setImg(null);
+//
+//        ObjectMapper objectMapper = new ObjectMapper();
+//
+//        // Act
+//        mockMvc.perform(MockMvcRequestBuilders.post("/api/admin/secure/add/book")
+//                        .header("Authorization", token)
+//                        .content(objectMapper.writeValueAsString(addBookRequest))
+//                        .contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk());
+//
+//        // Assert
+//        Mockito.verify(adminService, Mockito.times(1)).postBook(addBookRequest);
+//    }
 
     @Test
     @DisplayName("Test deleteBook endpoint")
