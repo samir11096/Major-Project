@@ -1,5 +1,5 @@
 FROM amazoncorretto:17
-VOLUME /tmp
+#VOLUME /tmp
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 RUN mkdir /logs
