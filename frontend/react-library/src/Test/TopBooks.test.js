@@ -23,6 +23,7 @@ test('ExploreTopBooks renders correctly', () => {
 
   const exploreLink = screen.getByRole('link', { name: 'Explore top books' });
   expect(exploreLink).toBeInTheDocument();
+
 });
 
 test('ExploreTopBooks link navigates to /search', () => {
