@@ -28,6 +28,16 @@ pipeline {
                 }
             }
         }
+        stage("Push Backend Images to DockerHub"){
+                     steps {
+                            withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
+                               sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
+                               sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/backend:version1"
+                             }
+                             sh 'docker rmi samiraghouri/backend:version1'
+                          }
+
+        }
         stage("Build Frontend Image"){
             steps{
                 dir('frontend/react-library/')
@@ -36,6 +46,16 @@ pipeline {
                 }
             }
         }
+        stage("Push Frontend Images to DockerHub"){
+                     steps {
+                            withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
+                               sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
+                               sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/frontend:version1"
+                             }
+                             sh 'docker rmi samiraghouri/frontend:version1'
+                          }
+
+                }
         stage("Build Database Image"){
             steps{
              dir('database/')
@@ -44,20 +64,16 @@ pipeline {
                  }
             }
         }
-        stage("Push Images to DockerHub"){
-             steps {
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
-                       sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
-                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/backend:version1"
-                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/frontend:version1"
-                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/database:version1"
-                     }
-                     sh 'docker rmi samiraghouri/backend:version1'
-                     sh 'docker rmi samiraghouri/frontend:version1'
-                     sh 'docker rmi samiraghouri/database:version1'
-                  }
+        stage("Push Database Images to DockerHub"){
+                     steps {
+                            withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
+                               sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
+                               sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/database:version1"
+                             }
+                             sh 'docker rmi samiraghouri/database:version1'
+                          }
 
-        }
+                }
         stage("Ansibile Deployment"){
             steps{
                    sh 'ansible-playbook -i dev.inv playbook.yml'
